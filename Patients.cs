@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Health_Care_Center_Management_System_Task
 {
-    public partial class Form1 : Form
+    public partial class Patients : Form
     {
-        public Form1()
+        public Patients()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
