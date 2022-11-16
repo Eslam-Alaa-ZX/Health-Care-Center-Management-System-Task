@@ -66,5 +66,27 @@ namespace Health_Care_Center_Management_System_Task
                 key = Convert.ToInt32(PatientListGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
+
+        private void EditBTN_Click(object sender, EventArgs e)
+        {
+            if (PatientNameTB.Text == "" || PatientGenderCB.SelectedIndex == -1 || PatientPhoneTB.Text == "" || PatientAddressTB.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                String name = PatientNameTB.Text;
+                String gender = PatientGenderCB.SelectedItem.ToString();
+                String birthDate = PatientBirthDateDTP.Value.Date.ToString();
+                //birthDate = "CAST('"+birthDate+"', 0)";
+                String phone = PatientPhoneTB.Text;
+                String address = PatientAddressTB.Text;
+                String Query = "Update PatientTable set PatientName = '{0}',PatientGender = '{1}',PatientBirthDate = '{2}',PatientPhone = '{3}',PatientAddress = '{4}' where PatientId = {5}";
+                Query = string.Format(Query, name, gender, birthDate, phone, address,key);
+                Con.SetData(Query);
+                ShowPatients();
+                MessageBox.Show("Patient Updated!!!");
+            }
+        }
     }
 }

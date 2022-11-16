@@ -326,6 +326,7 @@ namespace Health_Care_Center_Management_System_Task
             this.EditBTN.TabIndex = 8;
             this.EditBTN.Text = "Edit";
             this.EditBTN.UseVisualStyleBackColor = false;
+            this.EditBTN.Click += new System.EventHandler(this.EditBTN_Click);
             // 
             // label10
             // 
