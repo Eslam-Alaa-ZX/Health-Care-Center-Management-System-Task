@@ -197,6 +197,7 @@ namespace Health_Care_Center_Management_System_Task
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(14, 133);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(250, 31);
@@ -205,6 +206,7 @@ namespace Health_Care_Center_Management_System_Task
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(14, 57);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(250, 31);
@@ -253,9 +255,9 @@ namespace Health_Care_Center_Management_System_Task
             this.label4.ForeColor = System.Drawing.Color.Orange;
             this.label4.Location = new System.Drawing.Point(0, 336);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 28);
+            this.label4.Size = new System.Drawing.Size(89, 28);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Diagnosts";
+            this.label4.Text = "Diagnosis";
             // 
             // label3
             // 

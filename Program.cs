@@ -16,7 +16,7 @@ namespace Health_Care_Center_Management_System_Task
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tests());
+            Application.Run(new Diagnosts());
         }
     }
 }
