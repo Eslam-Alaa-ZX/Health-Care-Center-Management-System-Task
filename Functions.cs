@@ -39,6 +39,7 @@ namespace Health_Care_Center_Management_System_Task
             {
                 Con.Open();
             }
+            Console.WriteLine(Query);
             Cmd.CommandText = Query;
             Cnt = Cmd.ExecuteNonQuery();
             Con.Close();

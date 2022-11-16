@@ -46,6 +46,8 @@ namespace Health_Care_Center_Management_System_Task
             this.PatientListGV = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.PatientBirthDateDTP = new System.Windows.Forms.DateTimePicker();
+            this.PatientGenderCB = new System.Windows.Forms.ComboBox();
             this.DeleteBTN = new System.Windows.Forms.Button();
             this.SaveBTN = new System.Windows.Forms.Button();
             this.EditBTN = new System.Windows.Forms.Button();
@@ -63,8 +65,6 @@ namespace Health_Care_Center_Management_System_Task
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.PatientGenderCB = new System.Windows.Forms.ComboBox();
-            this.PatientBirthDateDTP = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -225,6 +225,7 @@ namespace Health_Care_Center_Management_System_Task
             this.PatientListGV.Name = "PatientListGV";
             this.PatientListGV.Size = new System.Drawing.Size(949, 312);
             this.PatientListGV.TabIndex = 8;
+            this.PatientListGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientListGV_CellContentClick);
             // 
             // label14
             // 
@@ -260,6 +261,28 @@ namespace Health_Care_Center_Management_System_Task
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(985, 205);
             this.panel3.TabIndex = 0;
+            // 
+            // PatientBirthDateDTP
+            // 
+            this.PatientBirthDateDTP.CustomFormat = "";
+            this.PatientBirthDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PatientBirthDateDTP.Location = new System.Drawing.Point(306, 70);
+            this.PatientBirthDateDTP.Name = "PatientBirthDateDTP";
+            this.PatientBirthDateDTP.Size = new System.Drawing.Size(198, 31);
+            this.PatientBirthDateDTP.TabIndex = 10;
+            this.PatientBirthDateDTP.Value = new System.DateTime(2022, 11, 16, 21, 51, 24, 0);
+            // 
+            // PatientGenderCB
+            // 
+            this.PatientGenderCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PatientGenderCB.FormattingEnabled = true;
+            this.PatientGenderCB.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.PatientGenderCB.Location = new System.Drawing.Point(18, 146);
+            this.PatientGenderCB.Name = "PatientGenderCB";
+            this.PatientGenderCB.Size = new System.Drawing.Size(250, 36);
+            this.PatientGenderCB.TabIndex = 9;
             // 
             // DeleteBTN
             // 
@@ -441,27 +464,6 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 4;
             this.pictureBox7.TabStop = false;
-            // 
-            // PatientGenderCB
-            // 
-            this.PatientGenderCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PatientGenderCB.FormattingEnabled = true;
-            this.PatientGenderCB.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.PatientGenderCB.Location = new System.Drawing.Point(18, 146);
-            this.PatientGenderCB.Name = "PatientGenderCB";
-            this.PatientGenderCB.Size = new System.Drawing.Size(250, 36);
-            this.PatientGenderCB.TabIndex = 9;
-            // 
-            // PatientBirthDateDTP
-            // 
-            this.PatientBirthDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.PatientBirthDateDTP.Location = new System.Drawing.Point(306, 70);
-            this.PatientBirthDateDTP.Name = "PatientBirthDateDTP";
-            this.PatientBirthDateDTP.Size = new System.Drawing.Size(198, 31);
-            this.PatientBirthDateDTP.TabIndex = 10;
-            this.PatientBirthDateDTP.Value = new System.DateTime(2022, 11, 16, 21, 51, 24, 0);
             // 
             // Patients
             // 
