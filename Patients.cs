@@ -44,6 +44,7 @@ namespace Health_Care_Center_Management_System_Task
                 Query = string.Format(Query, name, gender, birthDate, phone, address);
                 Con.SetData(Query);
                 ShowPatients();
+                Clear();
                 MessageBox.Show("Patient Added!!!");
             }
         }
@@ -85,7 +86,34 @@ namespace Health_Care_Center_Management_System_Task
                 Query = string.Format(Query, name, gender, birthDate, phone, address,key);
                 Con.SetData(Query);
                 ShowPatients();
+                Clear();
                 MessageBox.Show("Patient Updated!!!");
+            }
+        }
+
+        private void Clear()
+        {
+            PatientNameTB.Text = "";
+            PatientGenderCB.SelectedIndex = -1;
+            PatientPhoneTB.Text = "";
+            PatientAddressTB.Text = "";
+        }
+
+        private void DeleteBTN_Click(object sender, EventArgs e)
+        {
+            if (key==0)
+            {
+                MessageBox.Show("Select A Patient!!!");
+            }
+            else
+            {
+               
+                String Query = "Delete from PatientTable where PatientId = {0}";
+                Query = string.Format(Query, key);
+                Con.SetData(Query);
+                ShowPatients();
+                Clear();
+                MessageBox.Show("Patient Deleted!!!");
             }
         }
     }

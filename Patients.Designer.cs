@@ -297,6 +297,7 @@ namespace Health_Care_Center_Management_System_Task
             this.DeleteBTN.TabIndex = 8;
             this.DeleteBTN.Text = "Delete";
             this.DeleteBTN.UseVisualStyleBackColor = false;
+            this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
             // SaveBTN
             // 
