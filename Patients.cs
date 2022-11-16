@@ -12,14 +12,19 @@ namespace Health_Care_Center_Management_System_Task
 {
     public partial class Patients : Form
     {
+        Functions Con;
         public Patients()
         {
             InitializeComponent();
+            Con = new Functions();
+            
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
+        
 
+        private void SaveBTN_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
