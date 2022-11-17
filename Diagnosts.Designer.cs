@@ -35,6 +35,8 @@ namespace Health_Care_Center_Management_System_Task
             this.label1 = new System.Windows.Forms.Label();
             this.DeleteBTN = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TestDiagCB = new System.Windows.Forms.ComboBox();
+            this.PatientDiagCB = new System.Windows.Forms.ComboBox();
             this.DateDiag = new System.Windows.Forms.DateTimePicker();
             this.SaveBTN = new System.Windows.Forms.Button();
             this.EditBTN = new System.Windows.Forms.Button();
@@ -47,9 +49,9 @@ namespace Health_Care_Center_Management_System_Task
             this.CostDiagTB = new System.Windows.Forms.TextBox();
             this.ResultDiagTB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.DiagList = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.DiagList = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -62,13 +64,11 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.PatientDiagCB = new System.Windows.Forms.ComboBox();
-            this.TestDiagCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiagList)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DiagList)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -146,6 +146,25 @@ namespace Health_Care_Center_Management_System_Task
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(985, 205);
             this.panel3.TabIndex = 0;
+            // 
+            // TestDiagCB
+            // 
+            this.TestDiagCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TestDiagCB.FormattingEnabled = true;
+            this.TestDiagCB.Location = new System.Drawing.Point(18, 146);
+            this.TestDiagCB.Name = "TestDiagCB";
+            this.TestDiagCB.Size = new System.Drawing.Size(250, 36);
+            this.TestDiagCB.TabIndex = 10;
+            this.TestDiagCB.SelectionChangeCommitted += new System.EventHandler(this.TestDiagCB_SelectionChangeCommitted);
+            // 
+            // PatientDiagCB
+            // 
+            this.PatientDiagCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PatientDiagCB.FormattingEnabled = true;
+            this.PatientDiagCB.Location = new System.Drawing.Point(18, 70);
+            this.PatientDiagCB.Name = "PatientDiagCB";
+            this.PatientDiagCB.Size = new System.Drawing.Size(250, 36);
+            this.PatientDiagCB.TabIndex = 10;
             // 
             // DateDiag
             // 
@@ -248,6 +267,7 @@ namespace Health_Care_Center_Management_System_Task
             // CostDiagTB
             // 
             this.CostDiagTB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CostDiagTB.Enabled = false;
             this.CostDiagTB.ForeColor = System.Drawing.Color.White;
             this.CostDiagTB.Location = new System.Drawing.Point(306, 146);
             this.CostDiagTB.Name = "CostDiagTB";
@@ -274,15 +294,6 @@ namespace Health_Care_Center_Management_System_Task
             this.label6.TabIndex = 3;
             this.label6.Text = "Manage Diagnosis";
             // 
-            // DiagList
-            // 
-            this.DiagList.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.DiagList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DiagList.Location = new System.Drawing.Point(18, 39);
-            this.DiagList.Name = "DiagList";
-            this.DiagList.Size = new System.Drawing.Size(949, 312);
-            this.DiagList.TabIndex = 8;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -303,6 +314,15 @@ namespace Health_Care_Center_Management_System_Task
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(985, 382);
             this.panel4.TabIndex = 1;
+            // 
+            // DiagList
+            // 
+            this.DiagList.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DiagList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DiagList.Location = new System.Drawing.Point(18, 43);
+            this.DiagList.Name = "DiagList";
+            this.DiagList.Size = new System.Drawing.Size(949, 312);
+            this.DiagList.TabIndex = 9;
             // 
             // panel1
             // 
@@ -433,24 +453,6 @@ namespace Health_Care_Center_Management_System_Task
             this.panel2.Size = new System.Drawing.Size(1017, 647);
             this.panel2.TabIndex = 6;
             // 
-            // PatientDiagCB
-            // 
-            this.PatientDiagCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.PatientDiagCB.FormattingEnabled = true;
-            this.PatientDiagCB.Location = new System.Drawing.Point(18, 70);
-            this.PatientDiagCB.Name = "PatientDiagCB";
-            this.PatientDiagCB.Size = new System.Drawing.Size(250, 36);
-            this.PatientDiagCB.TabIndex = 10;
-            // 
-            // TestDiagCB
-            // 
-            this.TestDiagCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TestDiagCB.FormattingEnabled = true;
-            this.TestDiagCB.Location = new System.Drawing.Point(18, 146);
-            this.TestDiagCB.Name = "TestDiagCB";
-            this.TestDiagCB.Size = new System.Drawing.Size(250, 36);
-            this.TestDiagCB.TabIndex = 10;
-            // 
             // Diagnosts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
@@ -472,9 +474,9 @@ namespace Health_Care_Center_Management_System_Task
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DiagList)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DiagList)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -506,7 +508,6 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.TextBox CostDiagTB;
         private System.Windows.Forms.TextBox ResultDiagTB;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView DiagList;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
@@ -524,5 +525,6 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.DateTimePicker DateDiag;
         private System.Windows.Forms.ComboBox TestDiagCB;
         private System.Windows.Forms.ComboBox PatientDiagCB;
+        private System.Windows.Forms.DataGridView DiagList;
     }
 }

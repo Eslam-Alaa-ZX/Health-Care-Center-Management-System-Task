@@ -18,7 +18,7 @@ namespace Health_Care_Center_Management_System_Task
         {
             InitializeComponent();
             Con = new Functions();
-            //ShowDiagnosis();
+            ShowDiagnosis();
             GetPatients();
             GetTests();
         }
@@ -45,9 +45,49 @@ namespace Health_Care_Center_Management_System_Task
             TestDiagCB.DataSource = Con.GetData(Query);
         }
 
+        private void GetCost()
+        {
+            string Query = "Select * from TestTable where TestId = {0}";
+            Query = string.Format(Query, TestDiagCB.SelectedValue.ToString());
+            foreach(DataRow dr in Con.GetData(Query).Rows)
+            {
+                CostDiagTB.Text = dr["TestCost"].ToString();
+            }
+        }
+
         private void SaveBTN_Click(object sender, EventArgs e)
         {
+            if (PatientDiagCB.SelectedIndex == -1 || CostDiagTB.Text == "" || ResultDiagTB.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }
+            else
+            {
+                int name = Convert.ToInt32(TestDiagCB.SelectedValue.ToString());
+                String date = DateDiag.Value.Date.ToString();
+                int test = Convert.ToInt32(TestDiagCB.SelectedValue.ToString());
+                int cost = Convert.ToInt32(CostDiagTB.Text);
+                String reslt = ResultDiagTB.Text;
+                String Query = "insert into DiagnosisTable values({0},'{1}',{2},{3},'{4}')";
+                Query = string.Format(Query, name, date, test, cost, reslt);
+                Con.SetData(Query);
+                ShowDiagnosis();
+                Clear();
+                MessageBox.Show("Diagnosis Added!!!");
+            }
+        }
 
+        private void TestDiagCB_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetCost();
+        }
+
+        private void Clear()
+        {
+            PatientDiagCB.SelectedIndex = -1;
+            TestDiagCB.SelectedIndex = -1;
+            CostDiagTB.Text = "";
+            ResultDiagTB.Text = "";
         }
     }
 }

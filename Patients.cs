@@ -116,5 +116,6 @@ namespace Health_Care_Center_Management_System_Task
                 MessageBox.Show("Patient Deleted!!!");
             }
         }
+
     }
 }
