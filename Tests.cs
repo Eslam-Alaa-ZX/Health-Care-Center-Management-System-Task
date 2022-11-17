@@ -103,5 +103,33 @@ namespace Health_Care_Center_Management_System_Task
                 MessageBox.Show("Test Deleted!!!");
             }
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Login page = new Login();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Patients page = new Patients();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Tests page = new Tests();
+            page.Show();
+            this.Hide();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Diagnosts page = new Diagnosts();
+            page.Show();
+            this.Hide();
+        }
     }
 }

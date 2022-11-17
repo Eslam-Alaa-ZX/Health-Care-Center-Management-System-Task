@@ -24,7 +24,20 @@ namespace Health_Care_Center_Management_System_Task
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if(UserName.Text == "" || Password.Text == "")
+            {
+                MessageBox.Show("Missing Data!!!");
+            }else if (UserName.Text == "Eslam" && Password.Text == "Alaa")
+            {
+                Patients page = new Patients();
+                page.Show();
+                this.Hide();
+            }
+            else
+            {
+                UserName.Text = "";
+                Password.Text = "";
+            }
         }
     }
 }

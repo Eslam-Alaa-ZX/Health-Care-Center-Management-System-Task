@@ -37,6 +37,7 @@ namespace Health_Care_Center_Management_System_Task
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.TestListGV = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -56,8 +57,8 @@ namespace Health_Care_Center_Management_System_Task
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TestListGV = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TestListGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
@@ -68,7 +69,6 @@ namespace Health_Care_Center_Management_System_Task
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TestListGV)).BeginInit();
             this.SuspendLayout();
             // 
             // DeleteBTN
@@ -84,9 +84,10 @@ namespace Health_Care_Center_Management_System_Task
             this.DeleteBTN.TabIndex = 8;
             this.DeleteBTN.Text = "Delete";
             this.DeleteBTN.UseVisualStyleBackColor = false;
-
             this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
-
+            // 
+            // SaveBTN
+            // 
             this.SaveBTN.BackColor = System.Drawing.Color.SpringGreen;
             this.SaveBTN.FlatAppearance.BorderSize = 0;
             this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,6 +156,16 @@ namespace Health_Care_Center_Management_System_Task
             this.panel4.Size = new System.Drawing.Size(985, 382);
             this.panel4.TabIndex = 1;
             // 
+            // TestListGV
+            // 
+            this.TestListGV.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TestListGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TestListGV.Location = new System.Drawing.Point(18, 35);
+            this.TestListGV.Name = "TestListGV";
+            this.TestListGV.Size = new System.Drawing.Size(949, 312);
+            this.TestListGV.TabIndex = 9;
+            this.TestListGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TestListGV_CellContentClick);
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -175,6 +186,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox7
             // 
@@ -281,6 +293,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -291,6 +304,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -311,6 +325,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox6
             // 
@@ -321,6 +336,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 8;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label1
             // 
@@ -361,16 +377,6 @@ namespace Health_Care_Center_Management_System_Task
             this.panel1.Size = new System.Drawing.Size(98, 619);
             this.panel1.TabIndex = 5;
             // 
-            // TestListGV
-            // 
-            this.TestListGV.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.TestListGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TestListGV.Location = new System.Drawing.Point(18, 35);
-            this.TestListGV.Name = "TestListGV";
-            this.TestListGV.Size = new System.Drawing.Size(949, 312);
-            this.TestListGV.TabIndex = 9;
-            this.TestListGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TestListGV_CellContentClick);
-            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
@@ -390,6 +396,7 @@ namespace Health_Care_Center_Management_System_Task
             this.Text = "Tests";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TestListGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -402,7 +409,6 @@ namespace Health_Care_Center_Management_System_Task
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TestListGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -33,12 +33,12 @@ namespace Health_Care_Center_Management_System_Task
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.LoginBTN = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,12 +72,12 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // UserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(359, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 31);
-            this.textBox1.TabIndex = 3;
+            this.UserName.Location = new System.Drawing.Point(359, 229);
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(250, 31);
+            this.UserName.TabIndex = 3;
             // 
             // label2
             // 
@@ -95,41 +95,42 @@ namespace Health_Care_Center_Management_System_Task
             this.label3.ForeColor = System.Drawing.Color.DarkOrange;
             this.label3.Location = new System.Drawing.Point(366, 290);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 28);
+            this.label3.Size = new System.Drawing.Size(88, 28);
             this.label3.TabIndex = 6;
-            this.label3.Text = "User Name";
+            this.label3.Text = "Password";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // Password
             // 
-            this.textBox2.Location = new System.Drawing.Point(359, 321);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 31);
-            this.textBox2.TabIndex = 5;
+            this.Password.Location = new System.Drawing.Point(359, 321);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(250, 31);
+            this.Password.TabIndex = 5;
+            this.Password.UseSystemPasswordChar = true;
             // 
-            // button1
+            // LoginBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Poppins", 13F);
-            this.button1.Location = new System.Drawing.Point(359, 403);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 45);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LoginBTN.BackColor = System.Drawing.Color.Orange;
+            this.LoginBTN.FlatAppearance.BorderSize = 0;
+            this.LoginBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginBTN.Font = new System.Drawing.Font("Poppins", 13F);
+            this.LoginBTN.Location = new System.Drawing.Point(359, 403);
+            this.LoginBTN.Name = "LoginBTN";
+            this.LoginBTN.Size = new System.Drawing.Size(250, 45);
+            this.LoginBTN.TabIndex = 7;
+            this.LoginBTN.Text = "Login";
+            this.LoginBTN.UseVisualStyleBackColor = false;
+            this.LoginBTN.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label4
+            // Reset
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(455, 453);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 28);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Reset";
+            this.Reset.AutoSize = true;
+            this.Reset.ForeColor = System.Drawing.Color.Orange;
+            this.Reset.Location = new System.Drawing.Point(455, 453);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(56, 28);
+            this.Reset.TabIndex = 8;
+            this.Reset.Text = "Reset";
             // 
             // Login
             // 
@@ -137,12 +138,12 @@ namespace Health_Care_Center_Management_System_Task
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(752, 491);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.LoginBTN);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Password);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -163,12 +164,12 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UserName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.Button LoginBTN;
+        private System.Windows.Forms.Label Reset;
     }
 }
 

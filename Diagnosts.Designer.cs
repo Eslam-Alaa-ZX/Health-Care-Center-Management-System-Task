@@ -98,6 +98,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 8;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label1
             // 
@@ -123,6 +124,7 @@ namespace Health_Care_Center_Management_System_Task
             this.DeleteBTN.TabIndex = 8;
             this.DeleteBTN.Text = "Delete";
             this.DeleteBTN.UseVisualStyleBackColor = false;
+            this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
             // 
             // panel3
             // 
@@ -174,6 +176,7 @@ namespace Health_Care_Center_Management_System_Task
             this.DateDiag.Size = new System.Drawing.Size(193, 31);
             this.DateDiag.TabIndex = 9;
             this.DateDiag.Value = new System.DateTime(2022, 11, 16, 21, 51, 24, 0);
+            this.DateDiag.ValueChanged += new System.EventHandler(this.DateDiag_ValueChanged);
             // 
             // SaveBTN
             // 
@@ -203,6 +206,7 @@ namespace Health_Care_Center_Management_System_Task
             this.EditBTN.TabIndex = 8;
             this.EditBTN.Text = "Edit";
             this.EditBTN.UseVisualStyleBackColor = false;
+            this.EditBTN.Click += new System.EventHandler(this.EditBTN_Click);
             // 
             // label10
             // 
@@ -266,9 +270,9 @@ namespace Health_Care_Center_Management_System_Task
             // 
             // CostDiagTB
             // 
-            this.CostDiagTB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CostDiagTB.BackColor = System.Drawing.SystemColors.Control;
             this.CostDiagTB.Enabled = false;
-            this.CostDiagTB.ForeColor = System.Drawing.Color.White;
+            this.CostDiagTB.ForeColor = System.Drawing.Color.Black;
             this.CostDiagTB.Location = new System.Drawing.Point(306, 146);
             this.CostDiagTB.Name = "CostDiagTB";
             this.CostDiagTB.Size = new System.Drawing.Size(250, 31);
@@ -323,6 +327,7 @@ namespace Health_Care_Center_Management_System_Task
             this.DiagList.Name = "DiagList";
             this.DiagList.Size = new System.Drawing.Size(949, 312);
             this.DiagList.TabIndex = 9;
+            this.DiagList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DiagList_CellContentClick);
             // 
             // panel1
             // 
@@ -401,6 +406,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pictureBox3
             // 
@@ -411,6 +417,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox5
             // 
@@ -421,6 +428,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox2
             // 
@@ -441,6 +449,7 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
