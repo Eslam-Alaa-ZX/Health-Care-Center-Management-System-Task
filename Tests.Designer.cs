@@ -30,19 +30,18 @@ namespace Health_Care_Center_Management_System_Task
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tests));
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DeleteBTN = new System.Windows.Forms.Button();
+            this.SaveBTN = new System.Windows.Forms.Button();
+            this.EditBTN = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TestCostTB = new System.Windows.Forms.TextBox();
+            this.TestNameTB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,8 +56,8 @@ namespace Health_Care_Center_Management_System_Task
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TestListGV = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel3.SuspendLayout();
@@ -69,49 +68,56 @@ namespace Health_Care_Center_Management_System_Task
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TestListGV)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // DeleteBTN
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Poppins", 12F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(556, 148);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 31);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.DeleteBTN.BackColor = System.Drawing.Color.Red;
+            this.DeleteBTN.FlatAppearance.BorderSize = 0;
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBTN.Font = new System.Drawing.Font("Poppins", 12F);
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
+            this.DeleteBTN.Location = new System.Drawing.Point(556, 148);
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.Size = new System.Drawing.Size(120, 31);
+            this.DeleteBTN.TabIndex = 8;
+            this.DeleteBTN.Text = "Delete";
+            this.DeleteBTN.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
+            this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
+=======
+>>>>>>> c750f81 (Eslam Alaa - Tests: Save,Edit,TestsList click functions.)
             // 
-            // button2
+            // SaveBTN
             // 
-            this.button2.BackColor = System.Drawing.Color.SpringGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Poppins", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(556, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 31);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.SaveBTN.BackColor = System.Drawing.Color.SpringGreen;
+            this.SaveBTN.FlatAppearance.BorderSize = 0;
+            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBTN.Font = new System.Drawing.Font("Poppins", 12F);
+            this.SaveBTN.ForeColor = System.Drawing.Color.White;
+            this.SaveBTN.Location = new System.Drawing.Point(556, 99);
+            this.SaveBTN.Name = "SaveBTN";
+            this.SaveBTN.Size = new System.Drawing.Size(120, 31);
+            this.SaveBTN.TabIndex = 8;
+            this.SaveBTN.Text = "Save";
+            this.SaveBTN.UseVisualStyleBackColor = false;
+            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
             // 
-            // button1
+            // EditBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Poppins", 12F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(556, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 31);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.EditBTN.BackColor = System.Drawing.Color.DarkOrange;
+            this.EditBTN.FlatAppearance.BorderSize = 0;
+            this.EditBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBTN.Font = new System.Drawing.Font("Poppins", 12F);
+            this.EditBTN.ForeColor = System.Drawing.Color.White;
+            this.EditBTN.Location = new System.Drawing.Point(556, 50);
+            this.EditBTN.Name = "EditBTN";
+            this.EditBTN.Size = new System.Drawing.Size(120, 31);
+            this.EditBTN.TabIndex = 8;
+            this.EditBTN.Text = "Edit";
+            this.EditBTN.UseVisualStyleBackColor = false;
+            this.EditBTN.Click += new System.EventHandler(this.EditBTN_Click);
             // 
             // label8
             // 
@@ -146,21 +152,12 @@ namespace Health_Care_Center_Management_System_Task
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.TestListGV);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Location = new System.Drawing.Point(12, 236);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(985, 382);
             this.panel4.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(949, 312);
-            this.dataGridView1.TabIndex = 8;
             // 
             // label14
             // 
@@ -194,23 +191,23 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox7.TabIndex = 9;
             this.pictureBox7.TabStop = false;
             // 
-            // textBox2
+            // TestCostTB
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(14, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 31);
-            this.textBox2.TabIndex = 5;
+            this.TestCostTB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TestCostTB.ForeColor = System.Drawing.Color.White;
+            this.TestCostTB.Location = new System.Drawing.Point(14, 133);
+            this.TestCostTB.Name = "TestCostTB";
+            this.TestCostTB.Size = new System.Drawing.Size(250, 31);
+            this.TestCostTB.TabIndex = 5;
             // 
-            // textBox1
+            // TestNameTB
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(14, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 31);
-            this.textBox1.TabIndex = 5;
+            this.TestNameTB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TestNameTB.ForeColor = System.Drawing.Color.White;
+            this.TestNameTB.Location = new System.Drawing.Point(14, 57);
+            this.TestNameTB.Name = "TestNameTB";
+            this.TestNameTB.Size = new System.Drawing.Size(250, 31);
+            this.TestNameTB.TabIndex = 5;
             // 
             // label6
             // 
@@ -226,13 +223,13 @@ namespace Health_Care_Center_Management_System_Task
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.DeleteBTN);
+            this.panel3.Controls.Add(this.SaveBTN);
+            this.panel3.Controls.Add(this.EditBTN);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.TestCostTB);
+            this.panel3.Controls.Add(this.TestNameTB);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(12, 5);
             this.panel3.Name = "panel3";
@@ -368,6 +365,16 @@ namespace Health_Care_Center_Management_System_Task
             this.panel1.Size = new System.Drawing.Size(98, 619);
             this.panel1.TabIndex = 5;
             // 
+            // TestListGV
+            // 
+            this.TestListGV.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TestListGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TestListGV.Location = new System.Drawing.Point(18, 35);
+            this.TestListGV.Name = "TestListGV";
+            this.TestListGV.Size = new System.Drawing.Size(949, 312);
+            this.TestListGV.TabIndex = 9;
+            this.TestListGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TestListGV_CellContentClick);
+            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
@@ -387,7 +394,6 @@ namespace Health_Care_Center_Management_System_Task
             this.Text = "Tests";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -400,6 +406,7 @@ namespace Health_Care_Center_Management_System_Task
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TestListGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,19 +414,18 @@ namespace Health_Care_Center_Management_System_Task
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DeleteBTN;
+        private System.Windows.Forms.Button SaveBTN;
+        private System.Windows.Forms.Button EditBTN;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TestCostTB;
+        private System.Windows.Forms.TextBox TestNameTB;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
@@ -434,5 +440,6 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView TestListGV;
     }
 }

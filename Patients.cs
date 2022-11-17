@@ -13,6 +13,7 @@ namespace Health_Care_Center_Management_System_Task
     public partial class Patients : Form
     {
         Functions Con;
+        int key = 0;
         public Patients()
         {
             InitializeComponent();
@@ -49,7 +50,6 @@ namespace Health_Care_Center_Management_System_Task
             }
         }
 
-        int key = 0;
 
         private void PatientListGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
