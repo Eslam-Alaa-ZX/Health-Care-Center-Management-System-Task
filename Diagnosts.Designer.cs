@@ -33,22 +33,21 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DeleteBTN = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DateDiag = new System.Windows.Forms.DateTimePicker();
+            this.SaveBTN = new System.Windows.Forms.Button();
+            this.EditBTN = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CostDiagTB = new System.Windows.Forms.TextBox();
+            this.ResultDiagTB = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DiagList = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,11 +62,12 @@ namespace Health_Care_Center_Management_System_Task
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.PatientDiagCB = new System.Windows.Forms.ComboBox();
+            this.TestDiagCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiagList)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -110,70 +110,80 @@ namespace Health_Care_Center_Management_System_Task
             this.label1.TabIndex = 7;
             this.label1.Text = "Health Care Management System";
             // 
-            // button3
+            // DeleteBTN
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Poppins", 12F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(847, 146);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 31);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.DeleteBTN.BackColor = System.Drawing.Color.Red;
+            this.DeleteBTN.FlatAppearance.BorderSize = 0;
+            this.DeleteBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBTN.Font = new System.Drawing.Font("Poppins", 12F);
+            this.DeleteBTN.ForeColor = System.Drawing.Color.White;
+            this.DeleteBTN.Location = new System.Drawing.Point(847, 146);
+            this.DeleteBTN.Name = "DeleteBTN";
+            this.DeleteBTN.Size = new System.Drawing.Size(120, 31);
+            this.DeleteBTN.TabIndex = 8;
+            this.DeleteBTN.Text = "Delete";
+            this.DeleteBTN.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.TestDiagCB);
+            this.panel3.Controls.Add(this.PatientDiagCB);
+            this.panel3.Controls.Add(this.DateDiag);
+            this.panel3.Controls.Add(this.DeleteBTN);
+            this.panel3.Controls.Add(this.SaveBTN);
+            this.panel3.Controls.Add(this.EditBTN);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.CostDiagTB);
+            this.panel3.Controls.Add(this.ResultDiagTB);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(16, 18);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(985, 205);
             this.panel3.TabIndex = 0;
             // 
-            // button2
+            // DateDiag
             // 
-            this.button2.BackColor = System.Drawing.Color.SpringGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Poppins", 12F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(847, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 31);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.DateDiag.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateDiag.Location = new System.Drawing.Point(593, 70);
+            this.DateDiag.Name = "DateDiag";
+            this.DateDiag.Size = new System.Drawing.Size(193, 31);
+            this.DateDiag.TabIndex = 9;
+            this.DateDiag.Value = new System.DateTime(2022, 11, 16, 21, 51, 24, 0);
             // 
-            // button1
+            // SaveBTN
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Poppins", 12F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(847, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 31);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.SaveBTN.BackColor = System.Drawing.Color.SpringGreen;
+            this.SaveBTN.FlatAppearance.BorderSize = 0;
+            this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBTN.Font = new System.Drawing.Font("Poppins", 12F);
+            this.SaveBTN.ForeColor = System.Drawing.Color.White;
+            this.SaveBTN.Location = new System.Drawing.Point(847, 97);
+            this.SaveBTN.Name = "SaveBTN";
+            this.SaveBTN.Size = new System.Drawing.Size(120, 31);
+            this.SaveBTN.TabIndex = 8;
+            this.SaveBTN.Text = "Save";
+            this.SaveBTN.UseVisualStyleBackColor = false;
+            this.SaveBTN.Click += new System.EventHandler(this.SaveBTN_Click);
+            // 
+            // EditBTN
+            // 
+            this.EditBTN.BackColor = System.Drawing.Color.DarkOrange;
+            this.EditBTN.FlatAppearance.BorderSize = 0;
+            this.EditBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBTN.Font = new System.Drawing.Font("Poppins", 12F);
+            this.EditBTN.ForeColor = System.Drawing.Color.White;
+            this.EditBTN.Location = new System.Drawing.Point(847, 48);
+            this.EditBTN.Name = "EditBTN";
+            this.EditBTN.Size = new System.Drawing.Size(120, 31);
+            this.EditBTN.TabIndex = 8;
+            this.EditBTN.Text = "Edit";
+            this.EditBTN.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -235,41 +245,23 @@ namespace Health_Care_Center_Management_System_Task
             this.label7.TabIndex = 6;
             this.label7.Text = "Patient";
             // 
-            // textBox4
+            // CostDiagTB
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(306, 146);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 31);
-            this.textBox4.TabIndex = 5;
+            this.CostDiagTB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.CostDiagTB.ForeColor = System.Drawing.Color.White;
+            this.CostDiagTB.Location = new System.Drawing.Point(306, 146);
+            this.CostDiagTB.Name = "CostDiagTB";
+            this.CostDiagTB.Size = new System.Drawing.Size(250, 31);
+            this.CostDiagTB.TabIndex = 5;
             // 
-            // textBox3
+            // ResultDiagTB
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(306, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 31);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(18, 146);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 31);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(18, 70);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 31);
-            this.textBox1.TabIndex = 5;
+            this.ResultDiagTB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ResultDiagTB.ForeColor = System.Drawing.Color.White;
+            this.ResultDiagTB.Location = new System.Drawing.Point(306, 70);
+            this.ResultDiagTB.Name = "ResultDiagTB";
+            this.ResultDiagTB.Size = new System.Drawing.Size(250, 31);
+            this.ResultDiagTB.TabIndex = 5;
             // 
             // label6
             // 
@@ -282,14 +274,14 @@ namespace Health_Care_Center_Management_System_Task
             this.label6.TabIndex = 3;
             this.label6.Text = "Manage Diagnosis";
             // 
-            // dataGridView1
+            // DiagList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(949, 312);
-            this.dataGridView1.TabIndex = 8;
+            this.DiagList.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DiagList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DiagList.Location = new System.Drawing.Point(18, 39);
+            this.DiagList.Name = "DiagList";
+            this.DiagList.Size = new System.Drawing.Size(949, 312);
+            this.DiagList.TabIndex = 8;
             // 
             // label14
             // 
@@ -305,7 +297,7 @@ namespace Health_Care_Center_Management_System_Task
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.DiagList);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Location = new System.Drawing.Point(16, 249);
             this.panel4.Name = "panel4";
@@ -441,14 +433,23 @@ namespace Health_Care_Center_Management_System_Task
             this.panel2.Size = new System.Drawing.Size(1017, 647);
             this.panel2.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // PatientDiagCB
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(593, 70);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(193, 31);
-            this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.Value = new System.DateTime(2022, 11, 16, 21, 51, 24, 0);
+            this.PatientDiagCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PatientDiagCB.FormattingEnabled = true;
+            this.PatientDiagCB.Location = new System.Drawing.Point(18, 70);
+            this.PatientDiagCB.Name = "PatientDiagCB";
+            this.PatientDiagCB.Size = new System.Drawing.Size(250, 36);
+            this.PatientDiagCB.TabIndex = 10;
+            // 
+            // TestDiagCB
+            // 
+            this.TestDiagCB.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TestDiagCB.FormattingEnabled = true;
+            this.TestDiagCB.Location = new System.Drawing.Point(18, 146);
+            this.TestDiagCB.Name = "TestDiagCB";
+            this.TestDiagCB.Size = new System.Drawing.Size(250, 36);
+            this.TestDiagCB.TabIndex = 10;
             // 
             // Diagnosts
             // 
@@ -471,7 +472,7 @@ namespace Health_Care_Center_Management_System_Task
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiagList)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -492,22 +493,20 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DeleteBTN;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SaveBTN;
+        private System.Windows.Forms.Button EditBTN;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CostDiagTB;
+        private System.Windows.Forms.TextBox ResultDiagTB;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DiagList;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
@@ -522,6 +521,8 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DateDiag;
+        private System.Windows.Forms.ComboBox TestDiagCB;
+        private System.Windows.Forms.ComboBox PatientDiagCB;
     }
 }

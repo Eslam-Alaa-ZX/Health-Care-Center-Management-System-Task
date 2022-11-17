@@ -84,13 +84,9 @@ namespace Health_Care_Center_Management_System_Task
             this.DeleteBTN.TabIndex = 8;
             this.DeleteBTN.Text = "Delete";
             this.DeleteBTN.UseVisualStyleBackColor = false;
-<<<<<<< HEAD
+
             this.DeleteBTN.Click += new System.EventHandler(this.DeleteBTN_Click);
-=======
->>>>>>> c750f81 (Eslam Alaa - Tests: Save,Edit,TestsList click functions.)
-            // 
-            // SaveBTN
-            // 
+
             this.SaveBTN.BackColor = System.Drawing.Color.SpringGreen;
             this.SaveBTN.FlatAppearance.BorderSize = 0;
             this.SaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
