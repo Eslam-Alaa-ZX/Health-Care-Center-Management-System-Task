@@ -37,7 +37,7 @@ namespace Health_Care_Center_Management_System_Task
             {
                 String name = PatientNameTB.Text;
                 String gender = PatientGenderCB.SelectedItem.ToString();
-                String birthDate = PatientBirthDateDTP.Value.Date.ToString();
+                String birthDate = PatientBirthDateDTP.Value.Date.ToShortDateString();
                 //birthDate = "CAST('"+birthDate+"', 0)";
                 String phone = PatientPhoneTB.Text;
                 String address = PatientAddressTB.Text;
@@ -53,19 +53,7 @@ namespace Health_Care_Center_Management_System_Task
 
         private void PatientListGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            PatientNameTB.Text = PatientListGV.SelectedRows[0].Cells[1].Value.ToString();
-            PatientGenderCB.SelectedItem = PatientListGV.SelectedRows[0].Cells[2].Value.ToString();
-            PatientBirthDateDTP.Text = PatientListGV.SelectedRows[0].Cells[3].Value.ToString();
-            PatientPhoneTB.Text = PatientListGV.SelectedRows[0].Cells[4].Value.ToString();
-            PatientAddressTB.Text = PatientListGV.SelectedRows[0].Cells[5].Value.ToString();
-            if (PatientNameTB.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(PatientListGV.SelectedRows[0].Cells[0].Value.ToString());
-            }
+
         }
 
         private void EditBTN_Click(object sender, EventArgs e)
@@ -78,7 +66,7 @@ namespace Health_Care_Center_Management_System_Task
             {
                 String name = PatientNameTB.Text;
                 String gender = PatientGenderCB.SelectedItem.ToString();
-                String birthDate = PatientBirthDateDTP.Value.Date.ToString();
+                String birthDate = PatientBirthDateDTP.Value.Date.ToShortDateString();
                 //birthDate = "CAST('"+birthDate+"', 0)";
                 String phone = PatientPhoneTB.Text;
                 String address = PatientAddressTB.Text;
@@ -283,6 +271,23 @@ namespace Health_Care_Center_Management_System_Task
         private void Patients_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void PatientListGV_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            PatientNameTB.Text = PatientListGV.SelectedRows[0].Cells[1].Value.ToString();
+            PatientGenderCB.SelectedItem = PatientListGV.SelectedRows[0].Cells[2].Value.ToString();
+            PatientBirthDateDTP.Text = PatientListGV.SelectedRows[0].Cells[3].Value.ToString();
+            PatientPhoneTB.Text = PatientListGV.SelectedRows[0].Cells[4].Value.ToString();
+            PatientAddressTB.Text = PatientListGV.SelectedRows[0].Cells[5].Value.ToString();
+            if (PatientNameTB.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(PatientListGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
         }
     }
 }

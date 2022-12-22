@@ -63,13 +63,13 @@ namespace Health_Care_Center_Management_System_Task
             }
             else
             {
-                int name = Convert.ToInt32(TestDiagCB.SelectedValue.ToString());
-                String date = DateDiag.Value.Date.ToString();
+                int name = Convert.ToInt32(PatientDiagCB.SelectedValue.ToString());
+                String date = DateDiag.Value.Date.ToShortDateString();
                 int test = Convert.ToInt32(TestDiagCB.SelectedValue.ToString());
                 int cost = Convert.ToInt32(CostDiagTB.Text);
                 String reslt = ResultDiagTB.Text;
-                String Query = "insert into DiagnosisTable values({0},'{1}',{2},{3},'{4}')";
-                Query = string.Format(Query, name, date, test, cost, reslt);
+                String Query = "insert into DiagnosisTable values('{0}',{1},{2},{3},'{4}')";
+                Query = string.Format(Query, date, name, test, cost, reslt);
                 Con.SetData(Query);
                 ShowDiagnosis();
                 Clear();
@@ -115,7 +115,7 @@ namespace Health_Care_Center_Management_System_Task
             }
             else
             {
-                String Query = "Delete from DiagnosisTable where DiagId = {0}";
+                String Query = "Delete from DiagnosisTable  where DiagId = {0}";
                 Query = string.Format(Query, key);
                 Con.SetData(Query);
                 ShowDiagnosis();
@@ -132,13 +132,13 @@ namespace Health_Care_Center_Management_System_Task
             }
             else
             {
-                int name = Convert.ToInt32(TestDiagCB.SelectedValue.ToString());
-                String date = DateDiag.Value.Date.ToString();
+                int name = Convert.ToInt32(PatientDiagCB.SelectedValue.ToString());
+                String date = DateDiag.Value.Date.ToShortDateString();
                 int test = Convert.ToInt32(TestDiagCB.SelectedValue.ToString());
                 int cost = Convert.ToInt32(CostDiagTB.Text);
                 String reslt = ResultDiagTB.Text;
                 String Query = "Update DiagnosisTable set DiagDate = {0},Patient = '{1}',Test = {2},Cost = {3},Result = '{4}' where DiagId = {5}";
-                Query = string.Format(Query, name, date, test, cost, reslt, key);
+                Query = string.Format(Query, date, name, test, cost, reslt, key);
                 Con.SetData(Query);
                 ShowDiagnosis();
                 Clear();
@@ -177,6 +177,23 @@ namespace Health_Care_Center_Management_System_Task
             Diagnosts page = new Diagnosts();
             page.Show();
             this.Hide();
+        }
+
+        private void DiagList_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DateDiag.Text = DiagList.SelectedRows[0].Cells[1].Value.ToString();
+            PatientDiagCB.SelectedValue = DiagList.SelectedRows[0].Cells[2].Value.ToString();
+            TestDiagCB.SelectedValue = DiagList.SelectedRows[0].Cells[3].Value.ToString();
+            CostDiagTB.Text = DiagList.SelectedRows[0].Cells[4].Value.ToString();
+            ResultDiagTB.Text = DiagList.SelectedRows[0].Cells[5].Value.ToString();
+            if (CostDiagTB.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(DiagList.SelectedRows[0].Cells[0].Value.ToString());
+            }
         }
     }
 }

@@ -65,6 +65,7 @@ namespace Health_Care_Center_Management_System_Task
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -232,13 +233,18 @@ namespace Health_Care_Center_Management_System_Task
             // 
             // PatientListGV
             // 
+            this.PatientListGV.AllowUserToAddRows = false;
+            this.PatientListGV.AllowUserToDeleteRows = false;
+            this.PatientListGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.PatientListGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.PatientListGV.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.PatientListGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PatientListGV.Location = new System.Drawing.Point(18, 39);
             this.PatientListGV.Name = "PatientListGV";
+            this.PatientListGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PatientListGV.Size = new System.Drawing.Size(949, 312);
             this.PatientListGV.TabIndex = 8;
-            this.PatientListGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PatientListGV_CellContentClick);
+            this.PatientListGV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.PatientListGV_CellMouseClick);
             // 
             // label14
             // 
@@ -279,7 +285,7 @@ namespace Health_Care_Center_Management_System_Task
             // 
             // PatientBirthDateDTP
             // 
-            this.PatientBirthDateDTP.CustomFormat = "";
+            this.PatientBirthDateDTP.CustomFormat = "dd-MM-yyyy";
             this.PatientBirthDateDTP.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.PatientBirthDateDTP.Location = new System.Drawing.Point(306, 70);
             this.PatientBirthDateDTP.Name = "PatientBirthDateDTP";
@@ -573,5 +579,6 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ComboBox PatientGenderCB;
         private System.Windows.Forms.DateTimePicker PatientBirthDateDTP;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

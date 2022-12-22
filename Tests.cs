@@ -54,16 +54,7 @@ namespace Health_Care_Center_Management_System_Task
 
         private void TestListGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            TestNameTB.Text = TestListGV.SelectedRows[0].Cells[1].Value.ToString();
-            TestCostTB.Text = TestListGV.SelectedRows[0].Cells[2].Value.ToString();
-            if (TestNameTB.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(TestListGV.SelectedRows[0].Cells[0].Value.ToString());
-            }
+
         }
 
         private void EditBTN_Click(object sender, EventArgs e)
@@ -130,6 +121,25 @@ namespace Health_Care_Center_Management_System_Task
             Diagnosts page = new Diagnosts();
             page.Show();
             this.Hide();
+        }
+
+        private void TestListGV_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            TestNameTB.Text = TestListGV.SelectedRows[0].Cells[1].Value.ToString();
+            TestCostTB.Text = TestListGV.SelectedRows[0].Cells[2].Value.ToString();
+            if (TestNameTB.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(TestListGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+
+        private void TestListGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

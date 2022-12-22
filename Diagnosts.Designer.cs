@@ -321,13 +321,18 @@ namespace Health_Care_Center_Management_System_Task
             // 
             // DiagList
             // 
+            this.DiagList.AllowUserToAddRows = false;
+            this.DiagList.AllowUserToDeleteRows = false;
+            this.DiagList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.DiagList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DiagList.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.DiagList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DiagList.Location = new System.Drawing.Point(18, 43);
             this.DiagList.Name = "DiagList";
+            this.DiagList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DiagList.Size = new System.Drawing.Size(949, 312);
             this.DiagList.TabIndex = 9;
-            this.DiagList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DiagList_CellContentClick);
+            this.DiagList.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DiagList_CellMouseClick);
             // 
             // panel1
             // 

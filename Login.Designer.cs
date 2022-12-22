@@ -29,6 +29,7 @@ namespace Health_Care_Center_Management_System_Task
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@ namespace Health_Care_Center_Management_System_Task
             this.Password = new System.Windows.Forms.TextBox();
             this.LoginBTN = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,6 +135,17 @@ namespace Health_Care_Center_Management_System_Task
             this.Reset.TabIndex = 8;
             this.Reset.Text = "Reset";
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
@@ -170,6 +184,8 @@ namespace Health_Care_Center_Management_System_Task
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Button LoginBTN;
         private System.Windows.Forms.Label Reset;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

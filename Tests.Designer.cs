@@ -158,13 +158,19 @@ namespace Health_Care_Center_Management_System_Task
             // 
             // TestListGV
             // 
+            this.TestListGV.AllowUserToAddRows = false;
+            this.TestListGV.AllowUserToDeleteRows = false;
+            this.TestListGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.TestListGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.TestListGV.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.TestListGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TestListGV.Location = new System.Drawing.Point(18, 35);
             this.TestListGV.Name = "TestListGV";
+            this.TestListGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.TestListGV.Size = new System.Drawing.Size(949, 312);
             this.TestListGV.TabIndex = 9;
-            this.TestListGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TestListGV_CellContentClick);
+            this.TestListGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TestListGV_CellContentClick_1);
+            this.TestListGV.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.TestListGV_CellMouseClick);
             // 
             // label14
             // 
